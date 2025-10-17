@@ -1,0 +1,171 @@
+/* ** CSS for modal**  */  
+
+
+.close_btn {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  width: 160px;
+  height : 24px ; 
+  background: none;
+  border: 1px solid red;    /* digging과 동일 라인 컬러 */
+  border-radius: 0;
+  color: red;               /* 글자색 통일 */
+  font-size: 2.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 1001;
+  transition: 0.2s ease;
+}
+
+.close_btn:hover {
+  background: red;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+a.live, 
+a.source { 
+  top: 20px;
+  right: 60px;
+  width: 160px;
+  height : 24px ; 
+  background: none;
+  border: 1px solid red;    /* digging과 동일 라인 컬러 */
+  border-radius: 0;
+  color: red;               /* 글자색 통일 */
+  font-size: 2.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 1001;
+  transition: 0.2s ease; 
+}  
+
+a.live:hover, 
+a.source:hover {
+    background: red;
+  color: #fff;
+  transform: scale(1.05);
+} 
+
+.modal_wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* 어두운 반투명 배경 */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal_content {
+  position : relative ; 
+  width: 90%;
+  max-width: 1000px ; 
+  height: 900px  ; 
+/*   max-height: 1000px;  */
+  margin-top: 20px ;
+  border-radius: 5px ; 
+  background-color: #fafafa; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.425);
+  overflow: hidden;
+}
+
+
+
+.pro_title h3 { 
+    font-family: 'Pretendard', sans-serif; 
+    font-size: 3.6rem ;
+    font-weight: 600; 
+    line-height: 5.6rem ;
+    margin-top: 20px ;
+}  
+
+
+
+.video_box {
+  width: 80%; /* 부모(.modal_content)의 80% */
+  max-width: 600px; /* 너무 커지지 않게 제한 */
+  aspect-ratio: 16 / 9; /* 16:9 비율 자동 계산 */
+  background: #000;
+  margin: 20px auto 0 ;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.video_box video {
+    width : 100% ; 
+    height : 100% ; 
+}
+
+.demo_box {
+  width : 80% ; 
+  max-width: 600px ;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 20px auto 0;  
+}
+
+/* .demo_box a {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.4rem;
+  transition: 0.25s;
+} */
+
+/* 색상 구분 */
+/* .demo_box .live {
+  background-color: #27b86f;
+  color: #fff; 
+}
+.demo_box .live:hover {
+  background-color: #1d965a;
+}
+
+.demo_box .source {
+  background-color:  #27b86f;
+  color: #fff;
+}
+.demo_box .source:hover {
+  background-color: #1d965a;
+} */ 
+
+.desc_box {
+  width: 80%;
+  max-width: 680px;
+  margin: 20px auto 0 ;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px;
+  padding: 12px;
+  background: transparent; 
+  font-family: 'Pretendard', sans-serif;
+}
+
+.desc_box > * {
+  border: 0.5px solid rgba(0,0,0,0.15);
+  padding: 12px;
+  border-radius: 4px;
+  background: #fff;
+  height : auto ;  
+  text-align: left; 
+  line-height: 2.4rem ;
+}
+
+.desc_box  span {
+  font-weight: 600 ; 
+  line-height: 3.2rem ;
+}
+
+
+
+
+
