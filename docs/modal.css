@@ -1,59 +1,13 @@
 /* ** CSS for modal**  */  
 
 
-.close_btn {
-  position: absolute;
-  top: 20px;
-  right: 60px;
-  width: 160px;
-  height : 24px ; 
-  background: none;
-  border: 1px solid red;    /* digging과 동일 라인 컬러 */
-  border-radius: 0;
-  color: red;               /* 글자색 통일 */
-  font-size: 2.4rem;
-  font-weight: 700;
-  cursor: pointer;
-  z-index: 1001;
-  transition: 0.2s ease;
-}
-
-.close_btn:hover {
-  background: red;
-  color: #fff;
-  transform: scale(1.1);
-}
-
-a.live, 
-a.source { 
-  top: 20px;
-  right: 60px;
-  width: 160px;
-  height : 24px ; 
-  background: none;
-  border: 1px solid red;    /* digging과 동일 라인 컬러 */
-  border-radius: 0;
-  color: red;               /* 글자색 통일 */
-  font-size: 2.4rem;
-  font-weight: 700;
-  cursor: pointer;
-  z-index: 1001;
-  transition: 0.2s ease; 
-}  
-
-a.live:hover, 
-a.source:hover {
-    background: red;
-  color: #fff;
-  transform: scale(1.05);
-} 
 
 .modal_wrap {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.6); /* 어두운 반투명 배경 */
   display: none;
   justify-content: center;
@@ -65,8 +19,8 @@ a.source:hover {
   position : relative ; 
   width: 90%;
   max-width: 1000px ; 
-  height: 900px  ; 
-/*   max-height: 1000px;  */
+  height: 90%  ; 
+   max-height: 1000px ;   
   margin-top: 20px ;
   border-radius: 5px ; 
   background-color: #fafafa; 
@@ -80,7 +34,7 @@ a.source:hover {
     font-family: 'Pretendard', sans-serif; 
     font-size: 3.6rem ;
     font-weight: 600; 
-    line-height: 5.6rem ;
+    line-height: 4.2rem ;
     margin-top: 20px ;
 }  
 
@@ -93,7 +47,7 @@ a.source:hover {
   background: #000;
   margin: 20px auto 0 ;
   border-radius: 4px;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 .video_box video {
@@ -110,62 +64,30 @@ a.source:hover {
   margin: 20px auto 0;  
 }
 
-/* .demo_box a {
-  display: inline-block;
-  padding: 10px 22px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.4rem;
-  transition: 0.25s;
-} */
 
-/* 색상 구분 */
-/* .demo_box .live {
-  background-color: #27b86f;
-  color: #fff; 
-}
-.demo_box .live:hover {
-  background-color: #1d965a;
-}
-
-.demo_box .source {
-  background-color:  #27b86f;
-  color: #fff;
-}
-.demo_box .source:hover {
-  background-color: #1d965a;
-} */ 
 
 .desc_box {
-  width: 80%;
-  max-width: 680px;
-  margin: 20px auto 0 ;
+  width: 600px;
+  max-width: 100%; 
+  height : 200px ; 
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 5px;
-  padding: 12px;
-  background: transparent; 
-  font-family: 'Pretendard', sans-serif;
+  grid-template-columns: 1fr;            /* 1열 */
+  grid-template-rows: repeat(4, auto);   /* 4행 */
+  gap: 20px;
+  box-sizing: border-box;  
+  margin-top: 20px ;
 }
 
 .desc_box > * {
-  border: 0.5px solid rgba(0,0,0,0.15);
   padding: 12px;
+  box-sizing: border-box;
+  border: 0.5px solid rgba(0,0,0,0.12);
   border-radius: 4px;
   background: #fff;
-  height : auto ;  
-  text-align: left; 
-  line-height: 2.4rem ;
-}
-
-.desc_box  span {
-  font-weight: 600 ; 
-  line-height: 3.2rem ;
 }
 
 
-
-
-
+.detail01 {
+  text-align: left ;
+}

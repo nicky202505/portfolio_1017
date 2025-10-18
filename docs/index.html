@@ -10,8 +10,14 @@
 
     <link rel="stylesheet" href="index.css">    
     <link rel="stylesheet" href="modal.css"> 
-    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="font.css"> 
+    <link rel="stylesheet" href="button.css">  
   
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+ 
     
 </head>
 <body>  
@@ -19,7 +25,7 @@
         <div class="h_wrap">
             <div class="h_inner">                
                 <ul class="menu">
-                    <li><a href="index.html"><h5>HOME</h5></a></li>
+                  <li><a href="#home"><h5>HOME</h5></a></li>
                     <li><a href="#about"><h5>ABOUT ME</h5></a></li>
                     <li><a href="#portfolio"><h5>PORTFOLIO</h5></a></li>
                     <li><a href="#skills"><h5>SKILLS</h5></a></li>
@@ -34,12 +40,14 @@
 
             </div>
         </section>
+ 
+        <section class="home" id="home"></section>    <!-- 앵커 잘못 걸림 수정 필요  -->
 
         <section class="about" id="about">
-                   <div class="icon"><i class="fa-solid fa-user"></i> </div>
-            <div>
-                <h2>ABOUT ME</h2>  
-            </div>
+                   <div class="section_title">
+                     <div class="icon"><i class="fa-solid fa-user"></i> </div>
+                                 <div> <h2>ABOUT ME</h2></div>
+                   </div>
             <div class="about_inner"> 
                 <div class="cv_box">
                     <div class="text_box">                         
@@ -55,10 +63,18 @@
                    </div>
                       <div class="rs_box"> 
                         <div class="resume"> 
-                            <div class="circle"><img src="images/dummy01.jpg" alt=""> <h3><span>이력서</span></h3> </div>                        
+                            <div class="circle">  
+                              
+                              <h4><a href="files/resume.pdf" target="_blank" rel="noopener">이력서</a></h4>   
+                            
+                            
+                            </div>                        
                         </div>
                         <div class="git">
-                             <div class="circle"> <img src="images/dummy01.jpg" alt=""><h3><span>GitHub</span></h3></div> 
+                             <div class="circle">                                
+                              <a href="https://github.com/nicky202505">
+                                <h4>GitHub</h4>
+                              </a></div> 
                         </div>                    
                     </div>
                 </div>    
@@ -66,16 +82,43 @@
                 
                 
                 
-            <div class="cando_box">   
-                      
-              
-                     <div class="grid">
-                         <h4>What Can I Do? </h4>    
-        <div class="grid_4x">
-    <div class="able"> <div class="circle"><img src="images/dummy01.jpg" alt=""> </div></div>
-    <div class="able"> <div class="circle"><img src="images/dummy01.jpg" alt=""> </div></div>
-    <div class="able"> <div class="circle"><img src="images/dummy01.jpg" alt=""> </div></div>
-    <div class="able"> <div class="circle"><img src="images/dummy01.jpg" alt=""> </div></div>
+            <div class="cando_box">                     
+              <div class="grid">
+                         <h4 class="able_title">What Can I Do? </h4>    
+              <div class="grid_4x">
+  
+                <div class="able">
+    <div class="circle">     
+      <h4>CODING</h4>
+    </div>
+  </div>
+
+  <div class="able">
+    <div class="circle">  
+      <h4>WEB DESIGN</h4>
+    </div>
+  </div>
+
+  <div class="able">
+    <div class="circle">
+    
+      <h4>APP DESIGN</h4>
+    </div>
+  </div>
+
+  <div class="able">
+    <div class="circle">
+    
+      <h4>UX/UI</h4>
+    </div>
+  </div>
+
+   <div class="able">
+    <div class="circle">
+    
+      <h4>GRAPHIC DESIGN</h4>
+    </div>
+  </div>
 </div>
 </div>
 
@@ -98,8 +141,10 @@
     <!-- ================= SECTION: PORTFOLIO ================= -->
 <section class="portfolio" id="portfolio">
   <div class="portfolio_inner">
-    <div class="icon"><i class="fa-solid fa-briefcase"></i></div>
-    <div><h2>PORTFOLIO</h2></div> 
+    <div class="section_title">
+      <div class="icon"><i class="fa-solid fa-briefcase"></i></div>
+      <div><h2>PORTFOLIO</h2></div>
+    </div>
 
     <!-- ===== PROJECT 01 ===== -->
     <div class="des_title">
@@ -114,8 +159,9 @@
       <div class="project01">
 
 
-        <div class="circle_big">
-          <img src="images/dummy01.jpg" alt="">
+        <div class="circle_big big01">
+         
+          
         </div>
 
 
@@ -130,7 +176,7 @@
               </li>
             </ul>
             <div class="button_box"> 
-              <button class="digging" data-modal="01"><h4>자세히 보기</h4></button> 
+              <button class="digging" data-modal="01"><h5>프로젝트 상세 보기 <i class="fa-solid fa-square-arrow-up-right"></i></h5></button> 
             </div>
           </div>          
         </div>  
@@ -150,42 +196,31 @@
   <div class="modal_wrap" id="modal01">   
     <div class="modal_content"> 
 
-          <button class="close_btn"><h6>Close</h6></button>  <!-- 닫기 버튼 --> 
+          <button class="close_btn"> 닫기  
 
-      <div class="pro_title"> <h3>신세계</h3> </div>  
+          </button>  <!-- 닫기 버튼 --> 
+
+      <div class="pro_title"> <h3>신세계 백화점 메인페이지 클론 코딩</h3> </div>  
 
       <section class="video_box">  <!-- 영상 박스 --> 
-        <video src="images/Sequence01.mp4"></video>
+        <video src="images/hotel_mockup.mp4"></video>
       </section>
 
 <div class="demo_box">
-  <a href="https://your-clone-page-url.com" target="_blank" class="live">LIVE DEMO</a>
-  <a href="https://github.com/your-repo" target="_blank" class="source">SOURCE CODE </a>
+  <h4><a href="https://nicky202505.github.io/project03/" target="_blank" class="live">LIVE DEMO <i class="fa-solid fa-square-arrow-up-right"></i></a>
+   <a href="https://github.com/nicky202505/project03.git" target="_blank" class="source">GitHub <i class="fa-solid fa-square-arrow-up-right"></i></a> 
 </div> 
 
-    <div class="desc_box"> 
-      <div class="desc01">
-        <h5><span>프로젝트 개요</span>: </h5>
-        <h6> 실제 신세계백화점 공식 사이트를 참고하여, 구조·UI·인터랙션을 클론 코딩한 프로젝트입니다. GSAP 애니메이션, Swiper Slider 등을 활용하여 고급 백화점의 화려하면서도 우아한 무드를 구현했습니다.
- </h6>
-      </div>
-      <div class="desc02">
-         <ul>
-           <li><h5><span>주요 포인트 : </span> </h5> </li>  
-          <li><h6> 비디오 배너와 동적 텍스트 전환 효과</h6></li>
-          <li><h6> 헤더 고정 및 스크롤 시 인터랙션</h6></li>
-          <li><h6> GSAP 타임라인을 통한 자연스러운 섹션 트랜지션</h6></li>           
-         </ul>                    
-      </div>
-      <div class="desc03">
-       <h5>사용 기술 <span>(Tech Stack)</span></h5>
-        <h6> HTML5 / CSS3 / JavaScript / GSAP / Swiper / Responsive Design </h6> 
-      </div> 
-      <div class="desc04">
-        <h5><span>프로젝트 성과 : </span></h5>
-        <h6>  브랜드 사이트의 구조를 분석하면서 실제 상용 사이트 수준의 구조 설계와 인터랙션 로직을 익혔습니다. 특히 GSAP 애니메이션 타이밍 조절과 반응형 대응을 통해 디자인 완성도를 높이는 경험을 했습니다 </h6>   
-      </div>       
-    </div>
+    <div class="desc_box">  
+      <div class="detail01"><h6>프로젝트 결과 : 고급 백화점의 화려한 이미지를 구현하고 있는 사이트의 구조와 디자인을 분석하면서 실제 상용 사이트 수준의 구조 설계와 인터랙션 로직을 익혔습니다. 특히 GSAP 애니메이션 타이밍 조절과 반응형 대응을 통해 디자인 완성도를 높이는 경험을 했습니다 </h6></div> 
+      <div class="detail01"><h6>포인트: 비디오 배너와 동적 텍스트 전환 효과 / 헤더 고정 및 스크롤 시 인터랙션 / GSAP 타임라인을 통한 자연스러운 섹션 트랜지션 </h6></div>
+      <div class="detail01"><h6>기술 스택(Tech Stack): HTML5 / CSS6 / JavaScript / GSAP / Swiper / Responsive Design</h6> </div>
+    
+ 
+
+
+      
+    </div> <!-- desc box  -->
   </div> <!-- modal content 끝 -->
 </div>  <!-- 모달 01 끝 !!!  -->
    
@@ -198,7 +233,7 @@
     <!-- ===== PROJECT 02 ===== -->
         <div class="des_title">
       <h3>
-        <span class="numbering" id="p01">01.</span>
+        <span class="numbering" id="p02">02.</span>
         신세계 백화점 메인페이지 클론 코딩
       </h3>
     </div>
@@ -209,7 +244,7 @@
 
 
         <div class="circle_big">
-          <img src="images/dummy01.jpg" alt="">
+          <img src=>
         </div>
 
 
@@ -253,8 +288,8 @@
       </section>
 
 <div class="demo_box">
-  <a href="https://your-clone-page-url.com" target="_blank" class="live">LIVE DEMO</a>
-  <a href="https://github.com/your-repo" target="_blank" class="source">SOURCE CODE </a>
+  <a href="https://your-clone-page-url.com" target="_blank" class="live"><h4>LIVE DEMO</h4></a>
+  <a href="https://github.com/your-repo" target="_blank" class="source"><h4>GitHub</h4> </a>
 </div> 
 
     <div class="text_box">
@@ -276,7 +311,7 @@
     <!-- ===== PROJECT 03 ===== -->
     <div class="des_title">
       <h3>
-        <span class="numbering" id="p01">01.</span>
+        <span class="numbering" id="p03">03.</span>
         신세계 백화점 메인페이지 클론 코딩
       </h3>
     </div>
@@ -287,7 +322,7 @@
 
 
         <div class="circle_big">
-          <img src="images/dummy01.jpg" alt="">
+          <img src=>
         </div>
 
 
@@ -317,7 +352,7 @@
     </div>  
 
    
-  <!-- 모달 01 FOR PROJECT01  -->  
+  <!-- 모달 03 FOR PROJECT03  -->  
 
   <div class="modal_wrap" id="modal03">   
     <div class="modal_content"> 
@@ -396,7 +431,9 @@
         </section>
     </main>
     <footer></footer>
+ 
 
-      <script src="script.js"></script>
+  <script src="script.js"></script>
+   
 </body>
 </html>
